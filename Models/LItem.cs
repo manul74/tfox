@@ -23,7 +23,7 @@ public partial class LItem : ObservableObject
     [ObservableProperty]
     private Boolean anyKeyClose = true;
 
-    public LItem(Guid groupID, Guid itemID, int itemPos, string itemName, string ItemCommand1, Boolean anyKeyClose)
+    public LItem(Guid groupID, Guid itemID, int itemPos, string itemName, string itemCommand1, Boolean anyKeyClose)
     {
         if (itemName == "") itemName = "NewItem";
         {
@@ -31,7 +31,7 @@ public partial class LItem : ObservableObject
             this.itemID = itemID;
             this.itemPos = itemPos;
             this.itemName = itemName;
-            this.itemCommand1 = ItemCommand1;
+            this.itemCommand1 = itemCommand1;
             this.anyKeyClose = anyKeyClose;
         }
     }
