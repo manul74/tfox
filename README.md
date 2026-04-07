@@ -10,7 +10,7 @@ You can save your command groups to files, transfer them to other computers, and
 
 All saved commands are stored in the /home/.tfox/ directory.
 
-The application is developed and tested for Debian-based systems such as Ubuntu and Kubuntu. Compatibility with other distributions is not guaranteed.
+The application is developed and tested for Debian-based systems such as Ubuntu and Kubuntu. Compatibility with other distributions is not tested.
 tfox is intended not for advanced terminal users, but for beginners who are just starting with Linux and may find it difficult to remember a large number of commands.
 
 
@@ -31,5 +31,6 @@ tfox дозволяє зберігати часто використовуван
 Усі збережені команди зберігаються в каталозі /home/.tfox/.
 
 Програму розроблено та протестовано для систем, сумісних із Debian, таких як Ubuntu та Kubuntu. 
-Робота на інших дистрибутивах не гарантується.
+Робота на інших дистрибутивах не тестувалася.
 tfox призначений не для досвідчених користувачів термінала, а для початківців, які лише починають знайомство з Linux і яким складно запам’ятати велику кількість команд.
+
