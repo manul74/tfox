@@ -105,7 +105,7 @@ public class StorageService : IDisposable
            itemID: Guid.NewGuid(),
            itemPos: 1,
            itemName: "Refresh package list && Install standard updates",
-           ItemCommand1: "sudo apt update && sudo apt upgrade -y",
+           itemCommand1: "sudo apt update && sudo apt upgrade -y",
            anyKeyClose: true
        ));
         _LItems.Add(new LItem(
@@ -113,7 +113,7 @@ public class StorageService : IDisposable
            itemID: Guid.NewGuid(),
            itemPos: 2,
            itemName: "Remove unnecessary files",
-           ItemCommand1: "sudo apt autoremove",
+           itemCommand1: "sudo apt autoremove",
            anyKeyClose: true
        ));
         _LItems.Add(new LItem(
@@ -121,7 +121,7 @@ public class StorageService : IDisposable
                itemID: Guid.NewGuid(),
                itemPos: 3,
                itemName: "Clearing the APT cache",
-               ItemCommand1: "sudo apt clean",
+               itemCommand1: "sudo apt clean",
                anyKeyClose: true
            ));
         GroupID = Guid.NewGuid();
@@ -131,7 +131,7 @@ public class StorageService : IDisposable
                itemID: Guid.NewGuid(),
                itemPos: 1,
                itemName: "STEP 1: Open GRUB",
-               ItemCommand1: "sudo nano /etc/default/grub",
+               itemCommand1: "sudo nano /etc/default/grub",
                anyKeyClose: true
            ));
         _LItems.Add(new LItem(
@@ -139,7 +139,7 @@ public class StorageService : IDisposable
                itemID: Guid.NewGuid(),
                itemPos: 2,
                itemName: "STEP 2: Update GRUB",
-               ItemCommand1: "sudo update-grub",
+               itemCommand1: "sudo update-grub",
                anyKeyClose: true
            ));
 

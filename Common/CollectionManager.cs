@@ -155,7 +155,7 @@ public class CollectionManager : IDisposable
                 itemID: newLItemGuid,
                 itemPos: 999,
                 itemName: dialog.itemName.Text ?? "Empty description",
-                ItemCommand1: dialog.itemCommand1.Text ?? "echo empty command",
+                itemCommand1: dialog.itemCommand1.Text ?? "echo empty command",
                 anyKeyClose: dialog.anyKeyClose.IsChecked ?? true
             ));
             RenumCollectionGroups();
