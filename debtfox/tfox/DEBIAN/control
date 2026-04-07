@@ -1,0 +1,8 @@
+Package: tfox
+Version: 0.1
+Architecture: amd64
+Depends: 
+Maintainer: manull <apetrenko74@gmail.com>
+Section: utils
+Priority: optional
+Description: Terminal-command-collections 

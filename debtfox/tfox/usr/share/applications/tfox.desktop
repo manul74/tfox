@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=tfox
+Comment=terminal-command-collections
+Exec=/usr/local/bin/tfoxapp/tfox
+Icon=tfox
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+NoDisplay=false
+StartupWMClass=tfox
