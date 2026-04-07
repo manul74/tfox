@@ -155,7 +155,8 @@ public class CollectionManager : IDisposable
                 itemID: newLItemGuid,
                 itemPos: 999,
                 itemName: dialog.itemName.Text ?? "Empty description",
-                ItemCommand1: dialog.itemCommand1.Text ?? "echo empty command"
+                ItemCommand1: dialog.itemCommand1.Text ?? "echo empty command",
+                anyKeyClose: dialog.anyKeyClose.IsChecked ?? true
             ));
             RenumCollectionGroups();
             SaveCollections();
@@ -167,11 +168,13 @@ public class CollectionManager : IDisposable
         var dialog = new ItemDialog();
         dialog.itemName.Text = item.ItemName;
         dialog.itemCommand1.Text = item.ItemCommand1;
+        dialog.anyKeyClose.IsChecked = item.AnyKeyClose;
         var result = await dialog.ShowDialog<string?>(owner);
         if (result != null)
         {
             item.ItemName = dialog.itemName.Text;
             item.ItemCommand1 = dialog.itemCommand1.Text;
+            item.AnyKeyClose = dialog.anyKeyClose.IsChecked ?? true;
             SaveCollections();
         }
     }

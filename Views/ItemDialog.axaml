@@ -20,6 +20,7 @@
              TextWrapping="Wrap"
              MinLines="3"
              MaxLines="6"/>
+    <CheckBox x:Name="anyKeyClose" Content="Any key closes the terminal"/>
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Right"
                 Spacing="10">

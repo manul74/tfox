@@ -15,18 +15,24 @@ public partial class LItem : ObservableObject
     private int itemPos;             //Позиція у списку
 
     [ObservableProperty]
-    private string itemName = "";   
+    private string itemName = "";
 
     [ObservableProperty]
     private string itemCommand1 = "";
 
-    public LItem(Guid groupID,Guid itemID, int itemPos, string itemName,string ItemCommand1)
-    {
-        this.groupID = groupID;
-        this.itemID = itemID;
-        this.itemPos = itemPos;
-        this.itemName = itemName;
-        this.itemCommand1 = ItemCommand1;
-    }
+    [ObservableProperty]
+    private Boolean anyKeyClose = true;
 
+    public LItem(Guid groupID, Guid itemID, int itemPos, string itemName, string ItemCommand1, Boolean anyKeyClose)
+    {
+        if (itemName == "") itemName = "NewItem";
+        {
+            this.groupID = groupID;
+            this.itemID = itemID;
+            this.itemPos = itemPos;
+            this.itemName = itemName;
+            this.itemCommand1 = ItemCommand1;
+            this.anyKeyClose = anyKeyClose;
+        }
+    }
 }
