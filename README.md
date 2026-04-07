@@ -1,4 +1,4 @@
-Eng: tfox (Terminal Collection Command)
+Eng: tfox ( Terminal Command Collection )
 
 A simple and user-friendly application designed specifically for beginner Linux users.
 
@@ -18,7 +18,7 @@ tfox is intended not for advanced terminal users, but for beginners who are just
 <img width="1585" height="875" alt="Screen2" src="https://github.com/user-attachments/assets/098d9ef8-fc9f-415c-b560-2717f079f853" />
 <img width="1696" height="874" alt="Screen3" src="https://github.com/user-attachments/assets/4b43036f-2f44-4a42-8fc3-6afda146db41" />
 
-Ukr: tfox (Terminal Collection Command)
+Ukr: tfox ( Terminal Command Collection )
 
 Проста та зручна програма, створена спеціально для початківців користувачів Linux.
 
