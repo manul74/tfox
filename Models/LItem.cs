@@ -6,16 +6,16 @@ namespace tfox.ViewModels;
 public partial class LItem : ObservableObject
 {
     [ObservableProperty]
-    private Guid groupID;          //Уникальный номер основной записи GUID
+    private Guid groupID;          //Унікальний номер основного запису GUID
 
     [ObservableProperty]
-    private Guid itemID;           //Уникальный номер запсис GUID
+    private Guid itemID;            //Унікальний номер запису GUID
 
     [ObservableProperty]
-    private int itemPos;            //Позиция в списке
+    private int itemPos;             //Позиція у списку
 
     [ObservableProperty]
-    private string itemName = "";   //Имя группы 
+    private string itemName = "";   
 
     [ObservableProperty]
     private string itemCommand1 = "";
