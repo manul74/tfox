@@ -1,0 +1,137 @@
+<Window xmlns="https://github.com/avaloniaui"
+        x:Name="AppWindow"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:tfox.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="1200"
+        Height="600"
+        WindowStartupLocation="CenterScreen"
+        x:Class="tfox.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/tfox.ico"
+        xmlns:models="using:tfox.ViewModels"
+        Title="tFox(terminal command collection)">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Window.KeyBindings>
+        <KeyBinding Gesture="Ctrl+Q"
+                    Command="{Binding QuitCommand}"
+                    CommandParameter="{Binding ElementName=AppWindow}"/>
+    </Window.KeyBindings>
+
+    <Grid RowDefinitions="Auto,*" Margin="10">
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_Program">
+                <MenuItem Header="_Open saved collections folder"
+                          Command="{Binding OpenSavedCollectionsFolder}"
+                          CommandParameter="{Binding ElementName=AppWindow}"
+                          />
+                <Separator/>
+                <MenuItem Header="_Quit"
+                          Command="{Binding QuitCommand}"
+                          InputGesture="Ctrl+Q"
+                          CommandParameter="{Binding ElementName=AppWindow}" />
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" ColumnDefinitions="2*,Auto,8*">
+
+            <!-- LEFT BLOCK -->
+            <Grid Grid.Column="0" RowDefinitions="Auto,*">
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <Button Content="▲" Click="GroupUp" Margin="0,0,5,0" ToolTip.Tip="Move selected group Up" />
+                    <Button Content="▼" Click="GroupDown" ToolTip.Tip="Move selected group Down" />
+                </StackPanel>
+
+                <!-- DataGrid -->
+                <DataGrid Grid.Row="1"
+                          x:Name="GroupsDataGrid"
+                          Background="Transparent"
+                          ItemsSource="{Binding LGroups}"
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="None"
+                          HeadersVisibility="None"
+                          Focusable="True"
+                          IsTabStop="True"
+                          IsReadOnly="True"
+                          VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch"
+                          SelectionMode="Single">
+
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Add" Click="GroupAddClick"/>
+                            <MenuItem Header="Edit" Click="GroupEditClick"/>
+                            <Separator/>
+                            <MenuItem Header="Delete" Click="GroupDeleteClick"/>
+                            <Separator/>
+                            <MenuItem Header="Export a node to a file" Click="ExportToFile"/>
+                            <MenuItem Header="Import a node from a file" Click="ImportFromFile"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Group Name"
+                                            Binding="{Binding GroupName}"
+                                            Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+
+            <Border Grid.Column="1"
+                    Width="1"
+                    Background="Gray"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center"
+                    Margin="3,0,3,0"/>
+
+            <!-- RIGHT BLOCK -->
+            <Grid Grid.Column="2" RowDefinitions="Auto,*">
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <Button Content="▲" Click="ItemUp" Margin="0,0,5,0" ToolTip.Tip="Move selected item Up"/>
+                    <Button Content="▼" Click="ItemDown" ToolTip.Tip="Move selected item Down" />
+                </StackPanel>
+
+                <!-- DataGrid -->
+                <DataGrid Grid.Row="1"
+                          x:Name="ItemsDataGrid"
+                          ItemsSource="{Binding FilteredItems}"
+                          Background="Transparent"
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="None"
+                          HeadersVisibility="None"
+                          IsReadOnly="True"
+                          VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch"
+                          SelectionMode="Single">
+
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Add" Click="ItemAddClick"/>
+                            <MenuItem Header="Edit" Click="ItemEditClick"/>
+                            <Separator/>
+                            <MenuItem Header="Delete" Click="ItemDeleteClick"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Item Name"
+                                            Binding="{Binding ItemName}"
+                                            Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

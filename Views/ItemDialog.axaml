@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="tfox.ItemDialog"
+        Width="1100"
+        SizeToContent="Height"
+        CanResize="False"
+        Icon="/Assets/tfox.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="Command">
+
+  <StackPanel Margin="20" Spacing="10">
+    <TextBlock Text="Description:"/>
+    <TextBox x:Name="itemName" KeyDown="OnKeyDown" />
+    <TextBlock Text="Command:"/>
+    <TextBox x:Name="itemCommand1"
+             AcceptsReturn="True"
+             TextWrapping="Wrap"
+             MinLines="3"
+             MaxLines="6"/>
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Spacing="10">
+      <Button Content="OK" Click="Ok_Click" IsDefault="True" Width="100" CornerRadius="10"/>
+      <Button Content="Cancel" Click="Cancel_Click" IsCancel="True" Width="100" CornerRadius="10"/>
+    </StackPanel>
+
+  </StackPanel>
+
+
+</Window>
