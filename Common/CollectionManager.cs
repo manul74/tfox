@@ -5,7 +5,6 @@ using Avalonia.Controls;
 using System;
 using System.Linq;
 using ReactiveUI;
-using System.Text.RegularExpressions;
 
 namespace tfox.Common;
 

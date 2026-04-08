@@ -1,10 +1,7 @@
 using Avalonia.Controls;
 using tfox.ViewModels;
-using Avalonia.Input;
 using Avalonia.Interactivity;
-using System.Text.RegularExpressions;
 using System;
-using System.Threading.Tasks;
 using tfox.Common;
 using System.Linq;
 using System.Collections.Generic;
