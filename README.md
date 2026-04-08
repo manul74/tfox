@@ -1,7 +1,7 @@
 
 <img width="256" height="256" alt="tfox" src="https://github.com/user-attachments/assets/0836446e-431e-4442-8251-9816ba27c6d7" />
 
-Download https://github.com/manul74/tfox/releases/tag/1.0.0.1
+Download (linux x64 ) https://github.com/manul74/tfox/releases/tag/1.0.0.1
 
 About tfox
 
