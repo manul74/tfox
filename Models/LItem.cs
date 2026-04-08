@@ -18,7 +18,7 @@ public partial class LItem : ObservableObject
     private string itemName = "";
 
     [ObservableProperty]
-    private string itemCommand1 = "";
+    private string itemCommand1 = "";  //linux команда для виконання
 
     [ObservableProperty]
     private Boolean anyKeyClose = true;
