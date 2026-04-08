@@ -135,12 +135,10 @@ public partial class MainWindow : Window
     {
         if (GroupsDataGrid.SelectedItem is LGroup selectedItem && DataContext is MainWindowViewModel vm)
         {
-            using (var cm = new CollectionManager(this, vm.LGroups, vm.LItems))
-            {
-                cm.MoveGroupUp(selectedItem);
-                cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
-                UpdateItemsFilteredByGroup();
-            }
+            using var cm = new CollectionManager(this, vm.LGroups, vm.LItems);
+            cm.MoveGroupUp(selectedItem);
+            cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
+            UpdateItemsFilteredByGroup();
         }
     }
 
@@ -148,12 +146,10 @@ public partial class MainWindow : Window
     {
         if (GroupsDataGrid.SelectedItem is LGroup selectedItem && DataContext is MainWindowViewModel vm)
         {
-            using (var cm = new CollectionManager(this, vm.LGroups, vm.LItems))
-            {
-                cm.MoveGroupDown(selectedItem);
-                cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
-                UpdateItemsFilteredByGroup();
-            }
+            using var cm = new CollectionManager(this, vm.LGroups, vm.LItems);
+            cm.MoveGroupDown(selectedItem);
+            cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
+            UpdateItemsFilteredByGroup();
         }
     }
 
@@ -162,13 +158,11 @@ public partial class MainWindow : Window
     {
         if (ItemsDataGrid.SelectedItem is LItem selectedItem && DataContext is MainWindowViewModel vm)
         {
-            using (var cm = new CollectionManager(this, vm.LGroups, vm.LItems))
-            {
-                cm.MoveItemUp(selectedItem);
-                cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
-                UpdateItemsFilteredByGroup();
-                cm.SetItemsGridCursorPositionByItemID(ItemsDataGrid, selectedItem.ItemID.ToString());
-            }
+            using var cm = new CollectionManager(this, vm.LGroups, vm.LItems);
+            cm.MoveItemUp(selectedItem);
+            cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
+            UpdateItemsFilteredByGroup();
+            cm.SetItemsGridCursorPositionByItemID(ItemsDataGrid, selectedItem.ItemID.ToString());
         }
     }
 
@@ -176,13 +170,11 @@ public partial class MainWindow : Window
     {
         if (ItemsDataGrid.SelectedItem is LItem selectedItem && DataContext is MainWindowViewModel vm)
         {
-            using (var cm = new CollectionManager(this, vm.LGroups, vm.LItems))
-            {
-                cm.MoveItemDown(selectedItem);
-                cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
-                UpdateItemsFilteredByGroup();
-                cm.SetItemsGridCursorPositionByItemID(ItemsDataGrid, selectedItem.ItemID.ToString());
-            }
+            using var cm = new CollectionManager(this, vm.LGroups, vm.LItems);
+            cm.MoveItemDown(selectedItem);
+            cm.SetGroupsGridCursorPositionByGroupID(GroupsDataGrid, selectedItem.GroupID.ToString());
+            UpdateItemsFilteredByGroup();
+            cm.SetItemsGridCursorPositionByItemID(ItemsDataGrid, selectedItem.ItemID.ToString());
         }
     }
 
