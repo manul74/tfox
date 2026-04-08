@@ -28,7 +28,7 @@ public partial class LItem : ObservableObject
         this.groupID = groupID;
         this.itemID = itemID;
         this.itemPos = itemPos;
-        this.itemName = string.IsNullOrWhiteSpace(itemName) ? "NewItem" : itemName;;
+        this.itemName = string.IsNullOrWhiteSpace(itemName) ? "NewItem" : itemName;
         this.itemCommand1 = itemCommand1;
         this.anyKeyClose = anyKeyClose;
     }

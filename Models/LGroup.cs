@@ -18,10 +18,9 @@ public partial class LGroup : ObservableObject
     // Конструктор
     public LGroup(Guid groupID, int groupPos, string groupName)
     {
-        if (groupName == "") groupName = "NewGroup";
         this.groupID = groupID;
         this.groupPos = groupPos;
-        this.groupName = groupName;
+        this.groupName = string.IsNullOrWhiteSpace(groupName) ? "NewGroup" : groupName;
     }
 }
     
