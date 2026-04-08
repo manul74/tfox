@@ -26,13 +26,11 @@ public partial class LItem : ObservableObject
     public LItem(Guid groupID, Guid itemID, int itemPos, string itemName, string itemCommand1, Boolean anyKeyClose)
     {
         if (itemName == "") itemName = "NewItem";
-        {
-            this.groupID = groupID;
-            this.itemID = itemID;
-            this.itemPos = itemPos;
-            this.itemName = itemName;
-            this.itemCommand1 = itemCommand1;
-            this.anyKeyClose = anyKeyClose;
-        }
+        this.groupID = groupID;
+        this.itemID = itemID;
+        this.itemPos = itemPos;
+        this.itemName = itemName;
+        this.itemCommand1 = itemCommand1;
+        this.anyKeyClose = anyKeyClose;
     }
 }
