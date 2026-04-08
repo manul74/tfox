@@ -1,3 +1,7 @@
+
+<img width="256" height="256" alt="tfox" src="https://github.com/user-attachments/assets/0836446e-431e-4442-8251-9816ba27c6d7" />
+
+
 Eng: tfox ( Terminal Command Collection )
 
 A simple and user-friendly application designed specifically for beginner Linux users.
