@@ -18,9 +18,9 @@ public class StorageService : IDisposable
     private ObservableCollection<LGroup> _LGroups { get; }
     private ObservableCollection<LItem> _LItems { get; }
 
-    public static string StorageFolder = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/";
-    private string GroupsFilePath = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/Groups.json";
-    private string ItemsFilePath = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/Items.json";
+    public static readonly string StorageFolder = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/";
+    private readonly string GroupsFilePath = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/Groups.json";
+    private readonly string ItemsFilePath = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/.tfox/Items.json";
 
     public StorageService(ObservableCollection<LGroup> LGroups, ObservableCollection<LItem> LItems)
     {
