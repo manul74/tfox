@@ -194,9 +194,7 @@ public partial class MainWindow : Window
     {
         if (GroupsDataGrid.SelectedItem is LGroup selectedItem && DataContext is MainWindowViewModel vm)
         {
-            var groupID = await new StorageService(vm.LGroups, vm.LItems).ImportFromFileAsync(this);
-            if (groupID == null)
-                return;
+            if (await new StorageService(vm.LGroups, vm.LItems).ImportFromFileAsync(this) == null) return;
             using var cm = new CollectionManager(this, vm.LGroups, vm.LItems);
             cm.SaveCollections();
         }
