@@ -154,7 +154,6 @@ public class StorageService : IDisposable
         LGroup? group = _LGroups.SingleOrDefault(g => g.GroupID == groupID);
         if (group == null)
             return;
-
         try
         {
             var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
