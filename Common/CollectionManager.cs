@@ -246,6 +246,6 @@ public class CollectionManager : IDisposable
 
     public void Dispose()
     {
-
+            GC.SuppressFinalize(this);
     }
 }
