@@ -231,7 +231,7 @@ public class StorageService : IDisposable
 
     public void Dispose()
     {
-
+        GC.SuppressFinalize(this);
     }
 
 }
