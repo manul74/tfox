@@ -9,7 +9,7 @@ Eng: tfox ( Terminal Command Collection )
 
 A simple and user-friendly application designed specifically for beginner Linux users.
 
-tfox allows you to save frequently used terminal commands and execute them with just a double-click. 
+tfox allows you to save your Linux commands that you don’t want to forget and run them in the terminal with a double mouse click.
 For convenience, commands can be organized into groups, letting you build your own collections for different tasks.
 
 All main actions are performed through a context menu, accessible via right-click, making the program intuitive and easy to use.
@@ -29,7 +29,7 @@ Ukr: tfox ( Terminal Command Collection )
 
 Проста та зручна програма, створена спеціально для початківців користувачів Linux.
 
-tfox дозволяє зберігати часто використовувані команди термінала та виконувати їх усього подвійним кліком миші.
+tfox дозволяє зберігати ваші Linux-команди, які ви не хочете забути, та запускати їх подвійним кліком миші.
 Для зручності команди можна об’єднувати в групи, створюючи власні колекції для різних завдань.
 
 Усі основні дії виконуються через контекстне меню, яке викликається натисканням правої кнопки миші, що робить роботу з програмою інтуїтивно зрозумілою та простою.
