@@ -10,7 +10,7 @@ public partial class LinuxCommandService
     {
     }
 
-    public void RunCommandAsync(LItem item)
+    public void RunLinuxTerminalCommand(LItem item)
     {
         Task.Run(() =>
         {
