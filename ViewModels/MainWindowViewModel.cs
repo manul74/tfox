@@ -43,7 +43,7 @@ namespace tfox.ViewModels
 
         public void OpenSavedCollectionsFolder(Window? window)
         {
-            _ = new LinuxCommandService().OpenSavedCollectionsFolderAsync();
+            new LinuxCommandService().OpenSavedCollectionsFolder();
         }
 
 

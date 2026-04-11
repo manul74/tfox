@@ -10,25 +10,31 @@ public partial class LinuxCommandService
     {
     }
 
-    public async Task RunCommandAsync(LItem item)
+    public void RunCommandAsync(LItem item)
     {
-        var suffix = item.AnyKeyClose ? "read -n 1 -s -r -p 'Press any key to close...'" : "cd $HOME; exec bash";
-        Process.Start(new ProcessStartInfo
+        Task.Run(() =>
         {
-            FileName = "x-terminal-emulator",
-            Arguments = $"-e bash -c \"trap 'echo Interrupted; exit 1' SIGINT; echo '$ {item.ItemCommand1}'; {item.ItemCommand1}; echo; {suffix}\"",
-            UseShellExecute = false
+            var suffix = item.AnyKeyClose ? "read -n 1 -s -r -p 'Press any key to close...'" : "cd $HOME; exec bash";
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "x-terminal-emulator",
+                Arguments = $"-e bash -c \"trap 'echo Interrupted; exit 1' SIGINT; echo '$ {item.ItemCommand1}'; {item.ItemCommand1}; echo; {suffix}\"",
+                UseShellExecute = false
+            });
         });
     }
 
 
-    public async Task OpenSavedCollectionsFolderAsync()
+    public void OpenSavedCollectionsFolder()
     {
-        Process.Start(new ProcessStartInfo
+        Task.Run(() =>
         {
-            FileName = "xdg-open",
-            Arguments = StorageService.StorageFolder,
-            UseShellExecute = false
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "xdg-open",
+                Arguments = StorageService.StorageFolder,
+                UseShellExecute = false
+            });
         });
     }
 

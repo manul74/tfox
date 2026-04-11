@@ -108,7 +108,7 @@ public partial class MainWindow : Window
     private void ItemDataGridDoubleTappedEvent(object? sender, Avalonia.Input.TappedEventArgs e)
     {
         if (sender is DataGrid grid && grid.SelectedItem != null)
-            _ = new LinuxCommandService().RunCommandAsync((LItem)grid.SelectedItem);
+            new LinuxCommandService().RunCommandAsync((LItem)grid.SelectedItem);
     }
 
     private void GroupsDataGridSelectionChangedEvent(object? sender, SelectionChangedEventArgs e)
