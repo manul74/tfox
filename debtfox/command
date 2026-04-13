@@ -1,1 +1,8 @@
+publish project
+dotnet publish -c Release -r linux-x64 --self-contained true /p:PublishTrimmed=true -o ./publish 
+
+Fast run 
+dotnet publish -c Release -r linux-x64 --self-contained true /p:PublishTrimmed=true /p:PublishReadyToRun=true -o ./publish 
+
+create deb file command
 dpkg-deb --build --root-owner-group tfox    
