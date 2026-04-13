@@ -45,8 +45,5 @@ namespace tfox.ViewModels
         {
             new LinuxCommandService().OpenSavedCollectionsFolder();
         }
-
-
-        
     }
 }
