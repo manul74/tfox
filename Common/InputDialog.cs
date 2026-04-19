@@ -4,8 +4,6 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Interactivity;
-using MsBox.Avalonia;
-using MsBox.Avalonia.Enums;
 
 namespace tfox.Common
 {
@@ -13,7 +11,7 @@ namespace tfox.Common
     {
         public bool IsOk { get; set; }
 
-        // null если Cancel
+        // null if Cancel
         public string? Text { get; set; }
     }
 
@@ -27,7 +25,7 @@ namespace tfox.Common
             Title = title;
             Width = 400;
             Height = 150;
-            CanResize = false; //  запрет изменения размера
+            CanResize = false; 
             WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             _tcs = new TaskCompletionSource<InputDialogResult>();
@@ -80,7 +78,7 @@ namespace tfox.Common
                 }
             };
 
-            // Фокус при открытии
+            // focus on open.
             Opened += (_, __) =>
             {
                 _textBox.Focus();
@@ -112,7 +110,7 @@ namespace tfox.Common
 
         protected override void OnClosed(EventArgs e)
         {
-            // если закрыли крестиком
+            // close without clicking OK or Cancel, treat as Cancel.
             if (!_tcs.Task.IsCompleted)
             {
                 _tcs.TrySetResult(new InputDialogResult
